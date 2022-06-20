@@ -33,7 +33,8 @@ defmodule ExMachinaMongo.MixProject do
     [
       {:ex_machina, "~> 2.0"},
       {:mongodb_driver, "~> 0.9.1", only: :test},
-      {:excoveralls, "~> 0.10", only: :test}
+      {:excoveralls, "~> 0.10", only: :test},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
 
