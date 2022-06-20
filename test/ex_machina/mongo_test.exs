@@ -1,4 +1,4 @@
-defmodule ExMachina.MongoTest do
+defmodule ExMachinaMongoTest do
   use ExUnit.Case
 
   @driver_opts [wtimeout: 100]
@@ -36,7 +36,7 @@ defmodule ExMachina.MongoTest do
 
   describe "When the :repo option is not provided" do
     defmodule NoRepoTestFactory do
-      use ExMachina.Mongo
+      use ExMachinaMongo
 
       def post_factory do
         %Post{
@@ -48,7 +48,7 @@ defmodule ExMachina.MongoTest do
     test "insert, insert_pair and insert_list raise helpful error messages if no repo was provided" do
       message = """
       insert/1, insert/2 and insert/3 are not available unless you provide the :repo option. Example:
-      use ExMachina.Mongo, repo: MyApp.Repo
+      use ExMachinaMongo, repo: MyApp.Repo
       """
 
       assert_raise RuntimeError, message, fn ->
@@ -79,7 +79,7 @@ defmodule ExMachina.MongoTest do
 
   describe "when provides a struct that is not a collection" do
     defmodule IsNotACollectionTestFactory do
-      use ExMachina.Mongo, repo: MyRepo
+      use ExMachinaMongo, repo: MyRepo
 
       def user_factory do
         %{
@@ -119,7 +119,7 @@ defmodule ExMachina.MongoTest do
 
   describe "insert/2 insert_pair/2 insert_list/3" do
     defmodule TestFactory do
-      use ExMachina.Mongo, repo: MyRepo
+      use ExMachinaMongo, repo: MyRepo
 
       def comment_factory do
         %Comment{

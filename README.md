@@ -1,4 +1,4 @@
-# ExMachinaMongodb
+# ExMachinaMongo
 
 **TODO: Add description**
 

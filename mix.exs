@@ -1,4 +1,4 @@
-defmodule ExMachinaMongodb.MixProject do
+defmodule ExMachinaMongo.MixProject do
   use Mix.Project
 
   def project do

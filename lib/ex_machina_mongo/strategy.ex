@@ -1,4 +1,4 @@
-defmodule ExMachina.MongoStrategy do
+defmodule ExMachinaMongo.Strategy do
   use ExMachina.Strategy, function_name: :insert
 
   def handle_insert(_, %{repo: nil}) do
@@ -28,7 +28,7 @@ defmodule ExMachina.MongoStrategy do
   defp raise_missing_repo_error() do
     raise """
     insert/1, insert/2 and insert/3 are not available unless you provide the :repo option. Example:
-    use ExMachina.Mongo, repo: MyApp.Repo
+    use ExMachinaMongo, repo: MyApp.Repo
     """
   end
 
