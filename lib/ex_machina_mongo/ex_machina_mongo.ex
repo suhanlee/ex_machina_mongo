@@ -31,6 +31,8 @@ defmodule ExMachinaMongo do
   def string_params_for(factory_module, factory_name, attrs \\ %{}) do
     %{__struct__: module} = document = factory_module.build(factory_name, attrs)
 
-    module.dump(document)
+    document
+    |> Poison.encode!()
+    |> Poison.decode!()
   end
 end

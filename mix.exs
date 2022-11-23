@@ -4,7 +4,7 @@ defmodule ExMachinaMongo.MixProject do
   def project do
     [
       app: :ex_machina_mongo,
-      version: "0.0.1",
+      version: "0.0.2",
       elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -32,6 +32,7 @@ defmodule ExMachinaMongo.MixProject do
   defp deps do
     [
       {:ex_machina, "~> 2.0"},
+      {:poison, "~> 2.0"},
       {:mongodb_driver, "~> 0.9.1", only: :test},
       {:excoveralls, "~> 0.10", only: :test},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
