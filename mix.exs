@@ -31,7 +31,7 @@ defmodule ExMachinaMongo.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ex_machina, "~> 2.0"},
+      {:ex_machina, "~> 2.7"},
       {:poison, "~> 2.0"},
       {:mongodb_driver, "~> 0.9.1", only: :test},
       {:excoveralls, "~> 0.10", only: :test},
